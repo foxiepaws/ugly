@@ -4,13 +4,14 @@
 // add to the ugly in your site programming.
 // Lets bring back the 90s web design style with our new stuff!
 
+// requires jquery
 
 // Contributers
 // Joshua Theze (Foxiepaws) - joshua.theze@gmail.com
 
 // just the stub that makes everything horrible.
 function uglify() {
-
+    random_colors_all();
 }
 
 /* get_random_color()
@@ -23,3 +24,19 @@ function get_random_color() {
   }
   return color;
 }
+function bgc_loop () { $(this).css("background-color",get_random_color()); $(this).children().map(bgc_loop) ; }
+function fgc_loop () { $(this).css("color",get_random_color()); $(this).children().map(fgc_loop) ; console.log(this);}
+function random_colors_bg() {
+    $('body').css("background-color",get_random_color());
+    $('body').children().map(bgc_loop);
+}
+function random_colors_fg (){
+    $('body').css("color",get_random_color());
+    $('body').children().map(fgc_loop);
+}
+function random_colors_all() {
+    random_colors_bg();
+    random_colors_fg();
+}
+
+
