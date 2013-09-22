@@ -11,6 +11,9 @@ A silly library that uglifies CSS and HTML
   - random\_colors\_fg
   - random\_colors\_all
 
+## What it does (right now)
+<img src="http://i.imgur.com/dz61e5C.png" />
+
 ## Criticism
 
 With only the first iteration of ugly, I've already got to say i've got some wonderful fans
